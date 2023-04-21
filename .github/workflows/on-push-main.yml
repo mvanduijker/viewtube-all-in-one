@@ -1,0 +1,13 @@
+name: Publish latest
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build-push:
+    uses: './.github/workflows/push-build.action.yml'
+    secrets: inherit
+    with:
+      architectures: |
+        linux/amd64
