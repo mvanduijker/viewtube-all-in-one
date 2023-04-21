@@ -14,9 +14,6 @@ RUN \
   && apt-get install -y --no-install-recommends redis mongodb-org \
   && rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 
-# mongodb and redis data directory
-RUN mkdir -p /data/db/ /data/redis/
-
 COPY entry-point.sh entry-point.sh
 
 ENV VIEWTUBE_DATABASE_HOST=localhost

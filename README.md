@@ -4,7 +4,17 @@ All in one image to easily run [Viewtube](https://github.com/ViewTube/viewtube) 
 
 ## Usage
 
+### From registry
+
 ```shell
-docker run --rm -it $(docker build -q .)
-open "http://localhost:9066"
+docker run --rm -p 8066:8066 -v $(pwd)/data:/data mvanduijker/viewtube-all-in-one
+open "http://localhost:8066"
+```
+
+
+### Development
+
+```shell
+docker run --rm -p 8066:8066 -v $(pwd)/data:/data $(docker build -q .)
+open "http://localhost:8066"
 ```
