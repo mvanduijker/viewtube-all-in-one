@@ -55,5 +55,5 @@ jobs:
           push: true
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
-          build-args:
-            VIEWTUBE_VERSION: ${{ inputs.tag }}
+          build-args: |
+            VIEWTUBE_VERSION=${{ inputs.tag }}
