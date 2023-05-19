@@ -11,3 +11,20 @@ jobs:
     with:
       architectures: |
         linux/amd64
+      tag: latest
+
+  build-push-dev:
+    uses: './.github/workflows/push-build.action.yml'
+    secrets: inherit
+    with:
+      architectures: |
+        linux/amd64
+      tag: dev
+
+  build-push-nightly:
+    uses: './.github/workflows/push-build.action.yml'
+    secrets: inherit
+    with:
+      architectures: |
+        linux/amd64
+      tag: nightly
