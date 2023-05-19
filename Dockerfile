@@ -1,4 +1,6 @@
-FROM mauriceo/viewtube:latest
+ARG VIEWTUBE_VERSION=latest
+
+FROM mauriceo/viewtube:$VIEWTUBE_VERSION
 
 RUN \
   --mount=type=cache,target=/var/cache/apt \
