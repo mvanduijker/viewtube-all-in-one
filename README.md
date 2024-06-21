@@ -18,3 +18,9 @@ open "http://localhost:8066"
 docker run --rm -p 8066:8066 -v $(pwd)/data:/data $(docker build -q .)
 open "http://localhost:8066"
 ```
+
+
+## Known issues
+
+- Mongodb requires a CPU with the AVX instruction set for x86_64 CPU's. Older cpu's are sadly out of luck.
+ 
