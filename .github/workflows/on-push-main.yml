@@ -13,7 +13,6 @@ jobs:
     with:
       architectures: |
         linux/amd64
-        linux/arm64
       tag: latest
 
   build-push-dev:
@@ -22,7 +21,6 @@ jobs:
     with:
       architectures: |
         linux/amd64
-        linux/arm64
       tag: dev
 
   build-push-nightly:
@@ -31,5 +29,4 @@ jobs:
     with:
       architectures: |
         linux/amd64
-        linux/arm64
       tag: nightly
